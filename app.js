@@ -294,3 +294,18 @@
     
 // );
 
+// ************************ typeof intanceof******************************
+
+function  identifica(param){
+    console.log(typeof param);
+
+   console.log( param instanceof Persona    );
+}
+function Persona(){
+    this.nombre = "Sayra",
+    this.apellido = "Pacheco",
+    this.edad = 20
+}
+
+var sayra = new Persona
+identifica(sayra);
