@@ -198,47 +198,99 @@
 // ************************Señor de los anillos ******************************
 
 
-function Jugador(nombre){
-    this.nombre =  nombre,
-    this.pv = 100,
-    this.sp = 100
+// function Jugador(nombre){
+//     this.nombre =  nombre,
+//     this.pv = 100,
+//     this.sp = 100
     
 
-    this.curar = function(jugadorObjetivo){
-        if(this.sp >=40){
-            this.sp -= 40;
-            jugadorObjetivo.pv += 20 ;
+//     this.curar = function(jugadorObjetivo){
+//         if(this.sp >=40){
+//             this.sp -= 40;
+//             jugadorObjetivo.pv += 20 ;
 
-        }else{
-            console.info(this.nombre+ "no tiene sp");
-        }
-        this.estado(jugadorObjetivo)
-    }
+//         }else{
+//             console.info(this.nombre+ "no tiene sp");
+//         }
+//         this.estado(jugadorObjetivo)
+//     }
 
-    this.tirarFlecha = function(jugadorObjetivo){
-        if(jugadorObjetivo.pv >40){
+//     this.tirarFlecha = function(jugadorObjetivo){
+//         if(jugadorObjetivo.pv >40){
 
-            jugadorObjetivo.pv -=40; 
-        }else{
-            jugadorObjetivo.pv=0
-            console.error(jugadorObjetivo.nombre + "a muerto");
-        }
-        this.estado(jugadorObjetivo)
+//             jugadorObjetivo.pv -=40; 
+//         }else{
+//             jugadorObjetivo.pv=0
+//             console.error(jugadorObjetivo.nombre + "a muerto");
+//         }
+//         this.estado(jugadorObjetivo)
 
-    }
+//     }
 
-    this.estado= function(jugadorObjetivo){
-        console.log(this);
-        console.log(jugadorObjetivo);
-    }
+//     this.estado= function(jugadorObjetivo){
+//         console.log(this);
+//         console.log(jugadorObjetivo);
+//     }
 
-}
+// }
 
-var gandalf = new Jugador("Gandalf");
-var legolas = new Jugador("Legolas");
+// var gandalf = new Jugador("Gandalf");
+// var legolas = new Jugador("Legolas");
 
 
-gandalf.curar (legolas);
-console.log(gandalf);
-console.log(legolas);
+// gandalf.curar (legolas);
+// console.log(gandalf);
+// console.log(legolas);
+
+// ************************Prototipos******************************
+//  function Persona (){
+//     this.nombre = "Fernando",
+//     this.apellido = "Herrera",
+//     this.edad = 30
+
+//     Persona.prototype.imprimirInformacion= function(){
+//         console.log(this.nombre+  " "+this.apellido + "("+this.edad+")");
+
+//     }
+   
+//  }
+
+//  var say= new Persona
+
+
+
+// ************************Funciones Anonimas******************************
+
+// (function(){
+
+//     var a = 10 ; 
+//     console.log(a);
+    
+//     function cambiarA(){
+//         a = 20;
+//     }
+    
+//     cambiarA();
+    
+//     console.log(a);
+
+// })();
+// ************************ otro ejemplo de Funciones Anonimas******************************
+
+// function ejecutarfuncion(fn){
+//     if(fn() === 1){
+//         return true;
+
+//     }else {
+//         return false;
+//     }
+// };
+
+// console.log(
+//     ejecutarfuncion( function(){
+//         console.log("funciona nonima ejecutada");
+//         return 1;
+//     })
+    
+// );
 
